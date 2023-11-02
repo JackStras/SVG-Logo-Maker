@@ -41,5 +41,16 @@ function makeLogo(file, data) {
         const logoText = `<text x="109" y="115" font-size="45" fill="${data.textColor}">${data.textInput}</text>`
     }
 
+    shape.setColor(data.shapeColor)
+    const logoShape = shape.render()
+    
+    
+    const finishedLogo = `
+    <svg width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+      ${logoShape}
+      ${logoText}
+    </svg>
+    `
 
+    fs.writeFile("logo.svg", finishedLogo, (error) => error ? console.error(error) : console.log("Generated logo.svg"))
 }
