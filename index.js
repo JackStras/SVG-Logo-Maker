@@ -29,16 +29,18 @@ const prompts = [
     }
 ]
 
-function makeLogo(file, data) {
+function makeLogo(data) {
+    let shape
+    let logoText = ``
     if (data.shapeInput == "Triangle") {
-        const shape = new Triangle()
-        const logoText = `<text x="109" y="135" font-size="45" fill="${data.textColor}">${data.textInput}</text>`
+        shape = new Triangle()
+        logoText = `<text x="109" y="135" font-size="45" fill="${data.textColor}">${data.textInput}</text>`
     } else if (data.shapeInput == "Square") {
-        const shape = new Square()
-        const logoText = `<text x="109" y="115" font-size="45" fill="${data.textColor}">${data.textInput}</text>`
+        shape = new Square()
+        logoText = `<text x="109" y="115" font-size="45" fill="${data.textColor}">${data.textInput}</text>`
     } else {
-        const shape = new Circle()
-        const logoText = `<text x="109" y="115" font-size="45" fill="${data.textColor}">${data.textInput}</text>`
+        shape = new Circle()
+        logoText = `<text x="109" y="115" font-size="45" fill="${data.textColor}">${data.textInput}</text>`
     }
 
     shape.setColor(data.shapeColor)
@@ -54,3 +56,9 @@ function makeLogo(file, data) {
 
     fs.writeFile("logo.svg", finishedLogo, (error) => error ? console.error(error) : console.log("Generated logo.svg"))
 }
+
+function init() {
+    inquirer.prompt(prompts).then((data) => makeLogo(data))
+}
+
+init()
