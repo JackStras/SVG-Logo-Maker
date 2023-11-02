@@ -1,4 +1,5 @@
 const inquirer = require("inquirer")
 const maxLengthInputPrompt = require("inquirer-maxlength-input-prompt")
-const fs = require("jest")
+const fs = require("fs")
 inquirer.registerPrompt('maxlength-input', maxLengthInputPrompt)
+const {Triangle, Square, Circle} = require("./lib/shapes")
