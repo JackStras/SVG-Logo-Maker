@@ -1,2 +1,44 @@
-# SVG-Logo-Maker
-SVG logo maker for challenge 10 of coding bootcamp
+
+  
+  # SVG Logo Maker
+
+  ## Table of Contents
+
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  ## Description
+
+  Application that generates a colored logo with colored text.
+
+  ## Installation
+  
+  Clone the repository and run npm install
+
+  ## Usage
+
+  Run node index.js and answer the prompts
+
+  ## License
+
+  N/A
+  
+
+  ## Contributing
+
+  N/A
+
+  ## Tests
+
+  Run npm run test in the console
+
+  ## Questions
+
+  My GitHub is [jackstras](https://github.com/jackstras).
+  If you have any further questions, you can email me at jackstrasbaugh@yahoo.com.
+
